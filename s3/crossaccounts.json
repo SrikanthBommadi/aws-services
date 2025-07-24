@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowDevAccount",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::010526266250:root"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::log-bucket/AWSLogs/010526266250/*"
+    },
+    {
+      "Sid": "AllowProdAccount",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::222222222222:root"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::log-bucket/AWSLogs/222222222222/*"
+    }
+  ]
+}

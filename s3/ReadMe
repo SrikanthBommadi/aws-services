@@ -1,0 +1,29 @@
+STORAGES
+
+s3-
+ebs-
+efs-
+
+s3=
+s3 is storage in the aws used as object data ,no structure,metadata=filetype,size ,no availabailty zone
+static website hostoging , manage storage  and use ,logs store= cloud trail and analaysis =aws lamda
+state management =terraform ,backups as snapshot
+versioning,serverless,sns for deletions and adding 
+*IAM POLICIES 
+*S3 BUCKET POLICIES 
+IAM POLICIES-
+user based, rolebased
+GET OBJECT ,PUT OBJECT,DELETE OBJECT.
+S3 BUCKET POLICIES -
+MFA ENABLED, PUBLIC ACCESS FOR WEBSITE HOSTINGS,CROSS ACCOUNT USING IAM POLICIES AND BUCKET POLICIES
+**storage class  will be considered  like glacier, to decrease price
+
+| Feature                     | EBS                             | EFS                            | S3                            |
+| --------------------------- | ------------------------------- | ------------------------------ | ----------------------------- |
+| **Mount To**                | Single EC2 instance             | Multiple EC2 instances (Linux) | Access via HTTP(S) API or SDK |
+| **OS Compatibility**        | Linux & Windows                 | Linux only                     | Any system via REST/S3 API    |
+| **Access Method**           | Block-level (like a hard drive) | File-level (NFS)               | Object-level (via key)        |
+| **Availability Zone Scope** | Single AZ                       | Multi-AZ                       | Global                        |
+| **Encryption**      		  | At-rest + in-transit			| At-rest + in-transit 		     | At-rest + in-transit 		 |
+| **Snapshots/Backup**		  | Supports snapshots  			| Backup feature exists			 | Versioning & backups 		 |
+| **Access Control**   		  | IAM + volume-level 			    | IAM + POSIX           		 | IAM + Bucket Policies		 |

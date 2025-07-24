@@ -1,0 +1,2 @@
+Baggage Tracking	Store status for each bag (checked, scanned, loaded, unloaded) for tracking.	Flexible data model, scalable I/O
+	Flight Status Caching	Store real-time flight status (delays, gate info) for fast lookups via mobile/web apps.	Sub-ms latency, auto-scaling, no infra to manage
